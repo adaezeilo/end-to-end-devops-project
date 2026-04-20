@@ -1,10 +1,8 @@
 ## Project Overview
 
-This project demonstrates a complete end-to-end DevOps workflow by deploying a simple web application using Docker and AWS EC2.
-The application is containerized, pushed to Docker Hub, and deployed on a live cloud server.
+This project demonstrates a complete end-to-end DevOps workflow by deploying a simple web application using Docker, Terraform, and AWS EC2. The infrastructure is provisioned using Infrastructure as Code (Terraform), the application is containerized with Docker, and deployed on a live cloud server.
 
 ##  Technologies Used
-
 - Docker
 - AWS EC2
 - Terraform
