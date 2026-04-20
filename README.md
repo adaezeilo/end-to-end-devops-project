@@ -3,24 +3,46 @@
 This project demonstrates a complete end-to-end DevOps workflow by deploying a simple web application using Docker and AWS EC2.
 The application is containerized, pushed to Docker Hub, and deployed on a live cloud server.
 
-## TECHNOLOGIES USED
-Docker 
-AWS EC2 
-Git & GitHub
-HTML (Basic Web App)
+##  Technologies Used
 
-## PROJECT  ARCHITECTURE
-Created a simple web application (HTML)
-Containerized the app using Docker
-Pushed Docker image to Docker Hub
-Provisioned an EC2 instance on AWS
-Installed Docker on EC2
-Pulled image from Docker Hub
-Ran container and exposed it on port 80
+- Docker
+- AWS EC2
+- Terraform
+- Git & GitHub
+- HTML (Basic Web App)
 
-## LIVE  APPLICATION
-Access the live app here:
+
+## Project Architecture
+
+- Created a simple web application using HTML
+- Containerized the application using Docker
+- Pushed Docker image to Docker Hub
+- Provisioned an EC2 instance on AWS using Terraform
+- Installed Docker on EC2
+- Pulled image from Docker Hub
+- Ran container and exposed it on port 80
+
+  ## Deployment Steps
+1. Provision Infrastructure
+Used Terraform to create:
+EC2 instance
+Security Group (Ports 22, 80, 443)
+
+## Application Setup
+Created a simple HTML application
+3. Containerization
+Dockerized the application using Nginx
+Built and ran the container
+4. Deployment
+Deployed the container on AWS EC2
+Accessed via public IP
+
+### LIVE  APPLICATION
+## Access the live app here:
 http://3.84.242.193
+(live app.webp)
+
+
 
 ## DOCKER  COMMANDS USED
 docker build -t devops-web-app .
@@ -28,14 +50,13 @@ docker tag devops-web-app adaezeilo/devops-web-app
 docker push adaezeilo/devops-web-app
 docker pull adaezeilo/devops-web-app
 docker run -d -p 80:80 adaezeilo/devops-web-app
+(docker1.webp)
 
 ## Infrastructure (Terraform)
 
 This project uses Terraform to provision AWS infrastructure:
-
 - EC2 instance for hosting the application
 - Security group to allow web traffic (port 80 and 5000)
-
 Terraform configuration is located in the /terraform directory.
 
 ## Security Note
