@@ -38,18 +38,19 @@ This project uses Terraform to provision AWS infrastructure:
 
 Terraform configuration is located in the /terraform directory.
 
-## FUTURE IMPROVEMENTS
-Implement CI/CD pipeline using GitHub Actions
-Use Terraform for infrastructure automation
-Add custom domain and HTTPS (SSL)
-Automate deployment process
+## Security Note
+
+Currently, the application is served over HTTP.
+Future improvement includes:
+Configuring HTTPS using SSL (Let's Encrypt)
+Setting up a reverse proxy (Nginx)
 
 ## AUTHOR
 Precious
 
 ## WHAT I LEARNED
+How to provision infrastructure using Terraform
 How to containerize applications using Docker
 How to deploy applications on AWS EC2
-How to manage Docker images with Docker Hub
-Basics of cloud deployment and DevOps workflow
+Understanding DevOps workflow from development to deployment
 
